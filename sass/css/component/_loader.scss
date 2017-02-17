@@ -1,0 +1,85 @@
+@import "base/common";
+
+.loader{
+  	position: fixed;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	
+	display:none;
+	width: 100%;
+	height: 100%;
+	
+	background-color: rgba(0,0,0,0.7);
+	
+	&.show{
+		display:block;
+		
+		.loader-block .loading{
+			@include animation-play-state(inherit);
+		}
+	}
+	
+	.loader-block{
+		position: absolute;
+		top:50%;
+		left: 50%;
+		
+		z-index:21;
+		
+		@include transform(translate(-50%,-50%));
+		
+		.loading{
+			height: 12em;
+			width: 12em;
+			border: .5em solid transparent;
+			border-radius: 500%;
+			
+			@include animation(loading 1s infinite linear);
+		}
+		
+		.text{
+			position: absolute;
+			top:50%;
+			left: 50%;
+			
+			width: 100%;
+			
+		  	font-size:120%;
+		 	text-align: center;
+		  	font-weight: 500%;
+    		letter-spacing: 3px;
+		  	
+		  	color: #fff;
+			@include transform(translate(-50%,-50%));
+		}
+	}
+}
+
+.loader-hidden{
+	overflow: hidden!important;
+}
+
+
+@include keyframes(loading){
+	0% {
+		border-right-color:transparent;
+		@include transform(rotate(0deg));
+	}
+	70% {
+	
+		border-right-color:#ff0053;
+		@include transform(rotate(300deg));
+	}
+	90% {
+		border-right-color:transparent;
+		@include transform(rotate(320deg));
+	}
+	100%{
+	
+		border-right-color:transparent;
+		@include transform(rotate(360deg));
+	}
+}

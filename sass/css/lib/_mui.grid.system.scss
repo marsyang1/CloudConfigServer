@@ -1,0 +1,53 @@
+@import "base/common";
+$width:100%/12;
+
+.mui-col-xs32-*,.mui-col-xs48-*,.mui-col-xs64-*{
+	float:left;
+}
+
+@for $i from 0 to 13 {
+	.mui-col-xs32-#{$i},.mui-col-xs48-#{$i},.mui-col-xs64-#{$i}{
+		float:left;
+		padding-left:.5em;
+		padding-right:.5em;
+	}
+	
+	.mui-col-xs32-#{$i} {
+		width:$width*$i;
+	}
+	
+	.mui-col-xs32-offset-#{$i} {
+		margin-left:$width*$i;
+	}
+}
+
+@media screen and(min-width:480px){
+	#mui-overlay {
+		.mui-overlay-model{
+		    position: relative;
+			top:10px;
+			@include transform( translate(0,0));
+		}
+	}
+	
+	@for $i from 0 to 13 {
+		.mui-col-xs48-#{$i} {
+			width:$width*$i;
+		}
+		.mui-col-xs48-offset-#{$i} {
+			margin-left:$width*$i;
+		}
+	}
+}
+
+@media screen and(min-width:640px){
+	@for $i from 0 to 13 {
+		.mui-col-xs64-#{$i} {
+			width:$width*$i;
+		}
+		.mui-col-xs64-offset-#{$i} {
+			margin-left:$width*$i;
+		}
+	}
+}
+

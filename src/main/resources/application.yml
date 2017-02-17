@@ -1,0 +1,33 @@
+endpoints:
+  enabled: true
+    
+encrypt:
+  keyStore:
+    location: classpath:/server.jks
+    password: clarepass
+    alias: clarekey
+    secret: isveryverykey
+logging:
+  level:
+    org:
+      springframework: info
+spring:
+  cloud:
+    config:
+      server:
+        prefix: /config
+        usecache: true
+        git:
+          uri: https://github.com/babyblue94520/SpringCloudConfig
+  application:
+    name: config-server
+  rabbitmq:
+    host: dockerhost
+    port: 5672
+    username: clare
+    password: 123456
+
+security:
+    name: clare
+    password: 123456
+    role: ADMIN
