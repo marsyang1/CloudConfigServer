@@ -1,11 +1,12 @@
 buildscript {
 	ext {
-		springBootVersion = '1.4.2.RELEASE'
+		springBootVersion = '1.5.1.RELEASE'
 	}
 	repositories {
-        maven { 
-        	url "http://192.168.99.100:8081/nexus/content/groups/public" 
-        }
+//        maven {
+//        	url "http://192.168.99.100:8081/nexus/content/groups/public"
+//        }
+		mavenCentral()
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -23,9 +24,10 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
-    maven { 
-    	url "http://192.168.99.100:8081/nexus/content/groups/public" 
-    }
+//    maven {
+//    	url "http://192.168.99.100:8081/nexus/content/groups/public"
+//    }
+	mavenCentral()
 }
 
 dependencies {
