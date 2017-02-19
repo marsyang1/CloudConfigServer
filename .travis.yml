@@ -1,4 +1,10 @@
 language: java
 jdk:
- - oraclejdk8
-
+- oraclejdk8
+deploy:
+  provider: heroku
+  api_key:
+    secure: jTzMDS9uXii1yll6sFluisrDDY84jY08ypR+CTKHK4+T7eIeUFKhgrkOAKqMMf9ch8LJqsRKZsnF2LjKjdfzfd2fotm2/y8AHydnca+lJ9fYkiKpGfRS9Puq5tj3/zqqtiZrATOV1tnrKs0F2pPZUzpWoKr3xA2Ha3hGbrdivd8sSvOZc+KSGmk/wZqSvpd2OEh9bKVjzbn70+bCbAdoxVvMwEDu4+KvrZPW9d7uTurKlCrVTF4L8bfnId/HHq/Sh53X+iUVs/Hzl/aJZekNue6XcpR/qlNErve4xZqKUcFwnkGF6H8eGFQEk0jWYDx9400o2veTORctam24ArO0G9TG0Muopkq6oMyarYk4yAHKmDkLEnb74f6hkZu9LeUxAPMS/c8RVe3+K016OtGpOhkq1UnQDvAr+28t1pGBNhyQ1Y5X8rp1q+Tlnlbzp9DHIkK/jhe+V4JiEWkhdT2JUANPpYxUKOIRfJvySJ6xIp+3oOqMe7YwclApDwGRm6IneGYILQYsWJ4TsG9kvawoC8pwt8PYQclZNz9nhmTioptXY9oawh3jXrj8yk4Dun396LhtTNwN7aIDHV/zfJMhoxkwmE2/ekVDQ1uoxcnbWI7J4CPTSMq9yN5I1SEq/sUC2mHoBqDeBXr3mWzvmxQnd/zFRXMkot4S42+ZJRl5164=
+  app: CloudConfigServer
+  on:
+    repo: marsyang1/CloudConfigServer
