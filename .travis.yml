@@ -8,3 +8,4 @@ deploy:
   app: cloudconfig-server
   on:
     repo: marsyang1/CloudConfigServer
+
